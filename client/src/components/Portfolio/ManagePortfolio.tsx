@@ -25,9 +25,9 @@ export default function PortfolioForm() {
         details: "",
       },
     ],
-    feedback: [], // ✅ renamed from "testimonials"
-    galleries: [], // ✅ missing before
-    contactDetails: { // ✅ renamed and aligned
+    feedback: [], 
+    galleries: [], 
+    contactDetails: { 
       phoneNumber: "",
       emailAddress: "",
       location: "",
@@ -35,12 +35,12 @@ export default function PortfolioForm() {
       socialLink2: "",
       websiteUrl: "",
     },
-    actionBlock: { // ✅ renamed and aligned
+    actionBlock: {
       heading: "",
       buttonLabel: "",
       buttonUrl: "",
     },
-    createdOn: new Date(), // ✅ renamed from "createdAt"
+    createdOn: new Date(), 
   });
 
   useEffect(() => {
