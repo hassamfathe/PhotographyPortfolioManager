@@ -16,7 +16,7 @@ const AuthProvider = ({children}:{children:ReactNode}) => {
             try {
                 const response = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/apiRoutes/protectedRoutes/protected-route-RouteName`, {withCredentials:true});
 
-                if (!response.data.success) {
+                if (!response.data.workFlag) {
                     setIsAuthenticated(false);
                 } else {
                     setIsAuthenticated(true);

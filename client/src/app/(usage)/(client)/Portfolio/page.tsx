@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 
 export default async function PortfolioPage() {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/portfolio/fetchPortfolioData`);
+    `${process.env.NEXT_PUBLIC_BACKEND_URL}/apiRoutes/portfolioRoutes/fetchPortfolioDataRouteName`);
 
   const contentType = response.headers.get("content-type");
 
@@ -45,7 +45,7 @@ export default async function PortfolioPage() {
   }
 
   const responseData = await response.json();
-  const portfolioData = responseData.portfolio[0];
+  const portfolioData = responseData.data[0];
 
   return <Portfolio portfolioData={portfolioData} />;
 }

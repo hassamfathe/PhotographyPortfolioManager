@@ -11,8 +11,8 @@ const AdminHeader = () => {
     const pathname = usePathname();
     return (
         <header itemProp="header" itemScope itemType="https://schema.org/CreativeWork">
-            <Image src={BRVLogo} alt="Black Rock Visuals" className="BRV-logo"/>
-            <h1>Black Rock Visuals Admin</h1>
+            <Image src={BRVLogo} alt="Photographer Portfolio Manager" className="P-logo"/>
+            <h1>Photographer Portfolio Manager Admin</h1>
 
                 <ul className="nav-links">
                     <li>

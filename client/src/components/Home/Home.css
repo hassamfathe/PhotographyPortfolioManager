@@ -2,7 +2,7 @@
 
 :root {
   --bg-gradient: linear-gradient(135deg, #fdfbfb, #ebedee);
-  --primary-color: #222;
+  --primary-color: black;
   --secondary-color: #6b7280;
   --accent-color: #6366f1;
   --accent-gradient: linear-gradient(135deg, #6366f1, #a855f7);
@@ -145,10 +145,10 @@ p {
 }
 
 /* CTA */
-.cta-section {
+.cta-section show {
   padding: 3rem 2rem;
   background: var(--accent-gradient);
-  color: white;
+  color: black;
   border-radius: var(--radius);
   box-shadow: var(--glass-shadow);
 }

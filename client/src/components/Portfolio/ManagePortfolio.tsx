@@ -9,100 +9,76 @@ import customMerge from "../Utility/CustomMerge";
 import RecurFormPortfolio from "../Utility/FormUse/RecurFormPortfolio";
 
 export default function PortfolioForm() {
-
-  const [portfolioData, setportfolioData] = useState<PortfolioDataType>({
-
-    titleName: "",
-    tagLine: "",
-    aboutBrand: "",
-    stats: {
-    clientShoots: 0,
-    selfAssignedShoots: 0,
-    awards: 0,
-    clientsServed:0,
-    yearsOfExperinece: 0,
-  },
-  featuredShoots:{
-    weddingsimage:['','',''],
-    eventsimage:['','',''],
-    portraitsimage:['','',''],
-    autoimage:['','',''],
-    fashionimage:['','','']
-  },
-    featuredServices: [
+  const [portfolioData, setPortfolioData] = useState<PortfolioDataType>({
+    heading: "",
+    subheading: "",
+    summary: "",
+    metrics: {
+      totalProjects: 0,
+      totalClients: 0,
+      achievements: 0,
+      yearsActive: 0,
+    },
+    offerings: [
       {
-      title:"",
-      description:"",
-    },
-    {
-      title:"",
-      description:"",
-    },
-    {
-      title:"",
-      description:"",
-    }
-
+        title: "",
+        details: "",
+      },
     ],
-    testimonials: [],
-    contactInfo: {
-    email: "",
-    phone: "",
-    location: "",
-    instagram: "",
-    facebook: "",
-    website: "",
-  },
-    ctaSection: {
-    title: "",
-    buttonText: "",
-    buttonLink: "",
-  },
-    createdAt: new Date(),
+    feedback: [], // ✅ renamed from "testimonials"
+    galleries: [], // ✅ missing before
+    contactDetails: { // ✅ renamed and aligned
+      phoneNumber: "",
+      emailAddress: "",
+      location: "",
+      socialLink1: "",
+      socialLink2: "",
+      websiteUrl: "",
+    },
+    actionBlock: { // ✅ renamed and aligned
+      heading: "",
+      buttonLabel: "",
+      buttonUrl: "",
+    },
+    createdOn: new Date(), // ✅ renamed from "createdAt"
+  });
 
-  })
-
-  
-
-  
-
-
-
-  useEffect (() => {
+  useEffect(() => {
     const fetchFormData = async () => {
       try {
-        const response = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/portfolio/fetchPortfolioData`);
-        const fetched =response.data.portfolio[0];
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/apiRoutes/portfolioRoutes/fetchPortfolioDataRouteName`
+        );
+        const fetched = response.data.data[0];
         const merged = mergeWith({}, portfolioData, fetched, customMerge);
-        setportfolioData(merged);
-      } catch(error) {
-        console.error("Error While Fetching The Form Data, ", error);
+        setPortfolioData(merged);
+      } catch (error) {
+        console.error("Error While Fetching The Form Data,", error);
       }
-    }
+    };
     fetchFormData();
   }, []);
+
   const handleFormSubmit = async (data: PortfolioDataType) => {
     try {
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/portfolio/savePortfolioData`, {data});
-      if(response.data.success) {
-        alert("Portfolio Data Updated!")
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/apiRoutes/portfolioRoutes/savePortfolioDataRouteName`,
+        { data }
+      );
+      if (response.data.workFlag) {
+        alert("Portfolio Data Updated!");
       }
     } catch (error) {
-      console.error("Error While Submitting The Data, ", error);
-
+      console.error("Error While Submitting The Data,", error);
     }
   };
-
-
-
-
 
   return (
     <div className="manage-portfolio-page">
       <RecurFormPortfolio<PortfolioDataType>
-      initialData={portfolioData}
-      onSubmit={handleFormSubmit}
-    />
+        initialData={portfolioData}
+        onSubmit={handleFormSubmit}
+      />
     </div>
   );
 }

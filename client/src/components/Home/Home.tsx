@@ -1,6 +1,13 @@
 "use client";
 import './Home.css';
 import Hero from './Hero/Hero';
+import photographerPic from '../../../public/photographer-studio-professional-logo-picture-design-template-0c9fdba20a1a41b13ecf919c33397127_screen.jpg';
+import wpic1 from '../../../public/Wedding.jpg';
+import evpic1 from '../../../public/Event.webp';
+import crpic1 from '../../../public/Cover1.jpg';
+import oudrpic1 from '../../../public/Outdoor.webp';
+import naturepic1 from '../../../public/Nature.jpg';
+
 import Image from 'next/image';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';

@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 const connectDB = async () => {
     try {
         await mongoose.connect(process.env.MONGO_URI as string, {
-            dbName:'bassamshoots'
+            dbName:'PhotoPortfolio'
         })
         console.log("Mongodb Connection Successful..")
     } catch (error) {

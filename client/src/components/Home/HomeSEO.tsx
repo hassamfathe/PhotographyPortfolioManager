@@ -1,11 +1,12 @@
 import './HomeSEO.css';
 import Image from 'next/image';
-import wpic1 from '../../../public/BlackRockVisuals/Wedding/WeddingHomePic.jpg';
-import evpic1 from '../../../public/BlackRockVisuals/Events/EventHomePic.jpg';
-import crpic1 from '../../../public/BlackRockVisuals/Cars/CarHomePic.jpg';
-import oudrpic1 from '../../../public/BlackRockVisuals/Outdoor Lifestyle/397511860_1493917118107649_1325039573087242707_n.jpeg';
-import naturepic1 from '../../../public/BlackRockVisuals/Nature/mountain.jpg';
-import photographerPic from '../../../public/BlackRockVisuals/Admin:Owner/448692835_18441678793048292_1011046373441418477_n.jpg';
+import wpic1 from '../../../public/Wedding.jpg';
+import evpic1 from '../../../public/Event.webp';
+import crpic1 from '../../../public/Cover1.jpg';
+import oudrpic1 from '../../../public/Outdoor.webp';
+import naturepic1 from '../../../public/Nature.jpg';
+import photographerPic from '../../../public/photographer-studio-professional-logo-picture-design-template-0c9fdba20a1a41b13ecf919c33397127_screen.jpg';
+
 
 const HomeSEO = () => {
 

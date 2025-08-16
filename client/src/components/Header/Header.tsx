@@ -10,8 +10,8 @@ const Header = () => {
     const pathname = usePathname();
     return (
         <header itemProp="header" itemScope itemType="https://schema.org/CreativeWork">
-            <Image src={Logo} alt="Black Rock Visuals" className="BRV-logo"/>
-            <h1 className="header h1">Photographer Portfolio/CRM</h1>
+            <Image src={Logo} alt="Photographer Portfolio Manager" className="P-logo"/>
+            <h1 className="header h1">Photographer Portfolio Manager</h1>
 
             <ul className="nav-links">
                 

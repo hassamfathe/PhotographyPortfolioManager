@@ -44,6 +44,14 @@
   gap: 2rem;
   justify-content: center;
   align-items: center;
+  padding: 10px;
+}
+
+.hero-cta-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #4CAF50;
 }
 
 /* ✅ Mobile responsiveness */

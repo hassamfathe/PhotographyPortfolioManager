@@ -5,8 +5,8 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-brand">
-          <h2>Black Rock Visuals</h2>
-          <p>Black Rock Visuals — Freezing Time, Framing Stories.</p>
+          <h2>Photographer Portfolio Manager</h2>
+          <p>Photographer Portfolio Manager — Freezing Time, Framing Stories.</p>
         </div>
 
         <div className="footer-links">
@@ -20,20 +20,20 @@ const Footer = () => {
 
         <div className="footer-contact">
           <h4>Contact Us</h4>
-          <p>Email: BlackRockVisuals@gmail.com</p>
-          <p>Location: Al Khobar, KSA</p>
+          <p>Email: PhotographerPortfolio@domain.com</p>
+          <p>Location: Lahore , Pakistan</p>
         </div>
 
         <div className="footer-social">
           <h4>Follow Us</h4>
           <div className="social-icons">
-            <a href="https://www.instagram.com/blackrockvisuals?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i className="fab fa-facebook-f"></i>Instagram</a>
+            <a href="https://www.instagram.com"><i className="fab fa-facebook-f"></i>Instagram</a>
           </div>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>© 2025 <Link href="/">Black Rock Visuals</Link> — Managed & Powered by <a href="https://alphatechit.dev" target="_blank" rel="noreferrer">AlphaTech</a></p>
+        <p>© 2025 <Link href="/">Photographer Portfolio Manager</Link> — Developed by <a href="https://alphatechit.dev/hassamfathe" target="_blank" rel="noreferrer">Hassam Fathe @ Alpha Tech</a></p>
       </div>
     </footer>
   );

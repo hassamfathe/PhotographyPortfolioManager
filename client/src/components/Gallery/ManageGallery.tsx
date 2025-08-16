@@ -33,7 +33,7 @@ const ManageGallery = () => {
     useEffect(() => {
         const fetchGalleryData = async () => {
             try { 
-                const response = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/gallery/fetchGalleryData`);
+                const response = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/apiRoutes/galleryRoutes/fetchGalleryDataRouteName`);
                 const fetched = response.data.galleryData;
                 const merged = mergeWith({}, galleryData, fetched, customMerge);
                 setGalleryData(merged);
@@ -46,7 +46,7 @@ const ManageGallery = () => {
 
     const handleGallerySubmit = async (data:GalleryDataType) => {
         try {
-            const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/gallery/saveGalleryData`, {data});
+            const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/apiRoutes/galleryRoutes/saveGalleryDataRouteName`, {data});
             if (response.data.success) {
                 alert("Gallery Data Saved Successfully");
             }

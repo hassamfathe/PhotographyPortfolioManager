@@ -18,7 +18,7 @@
 
 .footer-brand h2 {
   font-size: 2rem;
-  color: #DDB76A;
+  color: #6366f1;
 }
 
 .footer-brand p {
@@ -55,7 +55,7 @@
 }
 
 .footer-links ul li a:hover {
-  color: #ddb76a;
+  color: #6366f1;
 }
 
 .footer-contact p {
@@ -70,7 +70,7 @@
 }
 
 .footer-social .social-icons a:hover {
-  color: #ddb76a;
+  color: #6366f1;
 }
 
 .footer-bottom {
@@ -81,6 +81,6 @@
 }
 
 .footer-bottom a {
-  color: #ddb76a;
+  color: #6366f1;
   text-decoration: none;
 }
