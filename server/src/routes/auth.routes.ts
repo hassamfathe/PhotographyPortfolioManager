@@ -1,5 +1,5 @@
 import AuthControllerUse from '../controllers/auth.controller.ts';
-import {generateToken} from '../middleware/TokenWork.ts';
+import {generateToken} from '../Utility/generateToken.ts';
 import express from 'express';
 const AuthEndpoint = express.Router();
 

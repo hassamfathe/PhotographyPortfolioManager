@@ -1,7 +1,7 @@
 
 
 
-import { CustomRequest, verifyToken } from '..//middleware/TokenWork.ts';
+import { CustomRequest, verifyToken } from '../Utility/generateToken.ts';
 import express from 'express';
 const ProtectedEndpoint = express.Router();
 
